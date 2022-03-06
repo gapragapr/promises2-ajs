@@ -1,5 +1,5 @@
-import json from './parser';
-import read from './render';
+import json from './parser.js';
+import read from './render.js';
 
 export default class GameSavingLoader{
     static async load(){
@@ -7,12 +7,7 @@ export default class GameSavingLoader{
             const data = await read();
             const result = await json(data);
 
-            try{
-                return JSON.parse(result);
-            }
-            catch(error){
-                return Promise.reject(error)
-            }
+            return Promise.reject(result)
         }
         catch(error){
             return error

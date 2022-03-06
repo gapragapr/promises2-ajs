@@ -1,4 +1,4 @@
-import GameSavingLoader from '../main';
+import GameSavingLoader from '../GameSavingLoader';
 
 test('should return string', async () => {
   const gameSavingLoader = await GameSavingLoader.load();
